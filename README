@@ -1,0 +1,48 @@
+NAME
+    Dist::Zilla::PluginBundle::AJGB - Dist::Zilla plugins for AJGB
+
+VERSION
+    version 1.103080
+
+SYNOPSIS
+        # dist.ini
+        [@AJGB]
+
+DESCRIPTION
+    This is the plugin bundle for AJGB. It's an equivalent to:
+
+        [@Basic]
+
+        [AutoMetaResources]
+        bugtracker.rt = 1
+        repository.github = user:ajgb
+        homepage = http://search.cpan.org/dist/%{dist}
+
+        [MetaConfig]
+        [ModuleBuild]
+        [PodCoverageTests]
+        [PodSyntaxTests]
+        [PkgVersion]
+        [AutoVersion]
+
+        [CheckChangesHasContent]
+        [CheckExtraTests]
+        [CompileTests]
+        [EOLTests]
+        [NoTabsTests]
+        [InstallGuide]
+        [KwaliteeTests]
+        [PortabilityTests]
+        [PodWeaver]
+        [ReadmeFromPod]
+
+AUTHOR
+    Alex J. G. Burzyński <ajgb@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Alex J. G. Burzyński
+    <ajgb@cpan.org>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
