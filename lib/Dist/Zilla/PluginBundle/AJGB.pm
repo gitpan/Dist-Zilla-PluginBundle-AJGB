@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::PluginBundle::AJGB;
 BEGIN {
-  $Dist::Zilla::PluginBundle::AJGB::VERSION = '1.103080';
+  $Dist::Zilla::PluginBundle::AJGB::VERSION = '1.103210';
 }
 # ABSTRACT: Dist::Zilla plugins for AJGB
 
@@ -47,7 +47,7 @@ sub configure {
         ),
         [
             AutoMetaResources => {
-                'repository.github' => [{ user => 'ajgb' }],
+                'repository.github' => 'user:ajgb',
                 'bugtracker.rt' => 1,
                 'homepage' => 'http://search.cpan.org/dist/%{dist}',
             },
@@ -68,7 +68,7 @@ Dist::Zilla::PluginBundle::AJGB - Dist::Zilla plugins for AJGB
 
 =head1 VERSION
 
-version 1.103080
+version 1.103210
 
 =head1 SYNOPSIS
 
