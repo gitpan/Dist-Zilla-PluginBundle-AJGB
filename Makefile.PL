@@ -27,6 +27,7 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::PluginBundle::AJGB',
   'PREREQ_PM' => {
     'Dist::Zilla' => '4.102342',
+    'Dist::Zilla::Plugin::Authority' => '0',
     'Dist::Zilla::Plugin::AutoMetaResources' => '0',
     'Dist::Zilla::Plugin::AutoVersion' => '0',
     'Dist::Zilla::Plugin::CheckChangesHasContent' => '0',
@@ -45,9 +46,11 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::PodWeaver' => '0',
     'Dist::Zilla::Plugin::PortabilityTests' => '0',
     'Dist::Zilla::Plugin::ReadmeFromPod' => '0',
-    'Moose' => '1.12'
+    'Moose' => '1.12',
+    'Pod::Weaver::Plugin::Encoding' => '0',
+    'Pod::Weaver::Section::SeeAlso' => '0'
   },
-  'VERSION' => '1.103210',
+  'VERSION' => '1.103270',
   'test' => {
     'TESTS' => 't/*.t'
   }

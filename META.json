@@ -28,6 +28,7 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla" : "4.102342",
+            "Dist::Zilla::Plugin::Authority" : 0,
             "Dist::Zilla::Plugin::AutoMetaResources" : 0,
             "Dist::Zilla::Plugin::AutoVersion" : 0,
             "Dist::Zilla::Plugin::CheckChangesHasContent" : 0,
@@ -46,7 +47,9 @@
             "Dist::Zilla::Plugin::PodWeaver" : 0,
             "Dist::Zilla::Plugin::PortabilityTests" : 0,
             "Dist::Zilla::Plugin::ReadmeFromPod" : 0,
-            "Moose" : "1.12"
+            "Moose" : "1.12",
+            "Pod::Weaver::Plugin::Encoding" : 0,
+            "Pod::Weaver::Section::SeeAlso" : 0
          }
       },
       "test" : {
@@ -70,7 +73,7 @@
          "web" : "http://github.com/ajgb/dist-zilla-pluginbundle-ajgb"
       }
    },
-   "version" : "1.103210",
+   "version" : "1.103270",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

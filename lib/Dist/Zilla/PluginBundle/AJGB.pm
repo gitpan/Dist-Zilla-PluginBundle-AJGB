@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::PluginBundle::AJGB;
 BEGIN {
-  $Dist::Zilla::PluginBundle::AJGB::VERSION = '1.103210';
+  $Dist::Zilla::PluginBundle::AJGB::VERSION = '1.103270';
 }
 # ABSTRACT: Dist::Zilla plugins for AJGB
 
@@ -34,7 +34,6 @@ sub configure {
             InstallGuide
             KwaliteeTests
             PortabilityTests
-            PodWeaver
             ReadmeFromPod
         ),
         (
@@ -52,6 +51,17 @@ sub configure {
                 'homepage' => 'http://search.cpan.org/dist/%{dist}',
             },
         ],
+        [
+            Authority => {
+                authority => 'cpan:AJGB',
+                do_metadata => 1,
+            }
+        ],
+        [
+            PodWeaver => {
+                config_plugin => '@AJGB',
+            }
+        ],
     );
 }
 
@@ -68,7 +78,7 @@ Dist::Zilla::PluginBundle::AJGB - Dist::Zilla plugins for AJGB
 
 =head1 VERSION
 
-version 1.103210
+version 1.103270
 
 =head1 SYNOPSIS
 
@@ -101,8 +111,14 @@ This is the plugin bundle for AJGB. It's an equivalent to:
     [InstallGuide]
     [KwaliteeTests]
     [PortabilityTests]
-    [PodWeaver]
     [ReadmeFromPod]
+
+    [Authority]
+    authority = cpan:AJGB
+    do_metadata = 1
+
+    [PodWeaver]
+    config_plugin = @AJGB
 
 =for Pod::Coverage     configure
 

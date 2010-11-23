@@ -19,6 +19,7 @@ meta-spec:
 name: Dist-Zilla-PluginBundle-AJGB
 requires:
   Dist::Zilla: 4.102342
+  Dist::Zilla::Plugin::Authority: 0
   Dist::Zilla::Plugin::AutoMetaResources: 0
   Dist::Zilla::Plugin::AutoVersion: 0
   Dist::Zilla::Plugin::CheckChangesHasContent: 0
@@ -38,11 +39,13 @@ requires:
   Dist::Zilla::Plugin::PortabilityTests: 0
   Dist::Zilla::Plugin::ReadmeFromPod: 0
   Moose: 1.12
+  Pod::Weaver::Plugin::Encoding: 0
+  Pod::Weaver::Section::SeeAlso: 0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-PluginBundle-AJGB
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-AJGB
   repository: git://github.com/ajgb/dist-zilla-pluginbundle-ajgb.git
-version: 1.103210
+version: 1.103270
 x_Dist_Zilla:
   plugins:
     -

@@ -21,13 +21,14 @@ my %module_build_args = (
     'Alex J. G. Burzyński <ajgb@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-PluginBundle-AJGB',
-  'dist_version' => '1.103210',
+  'dist_version' => '1.103270',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::PluginBundle::AJGB',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
     'Dist::Zilla' => '4.102342',
+    'Dist::Zilla::Plugin::Authority' => '0',
     'Dist::Zilla::Plugin::AutoMetaResources' => '0',
     'Dist::Zilla::Plugin::AutoVersion' => '0',
     'Dist::Zilla::Plugin::CheckChangesHasContent' => '0',
@@ -46,7 +47,9 @@ my %module_build_args = (
     'Dist::Zilla::Plugin::PodWeaver' => '0',
     'Dist::Zilla::Plugin::PortabilityTests' => '0',
     'Dist::Zilla::Plugin::ReadmeFromPod' => '0',
-    'Moose' => '1.12'
+    'Moose' => '1.12',
+    'Pod::Weaver::Plugin::Encoding' => '0',
+    'Pod::Weaver::Section::SeeAlso' => '0'
   },
   'script_files' => []
 );
