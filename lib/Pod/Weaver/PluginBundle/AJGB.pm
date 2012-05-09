@@ -4,6 +4,9 @@ package Pod::Weaver::PluginBundle::AJGB;
 BEGIN {
   $Pod::Weaver::PluginBundle::AJGB::AUTHORITY = 'cpan:AJGB';
 }
+{
+  $Pod::Weaver::PluginBundle::AJGB::VERSION = '2.01';
+}
 #ABSTRACT: Pod::Weaver configuration for AJGB
 
 use Pod::Weaver::Config::Assembler;
@@ -56,7 +59,7 @@ Pod::Weaver::PluginBundle::AJGB - Pod::Weaver configuration for AJGB
 
 =head1 VERSION
 
-version 2.00
+version 2.01
 
 =head1 DESCRIPTION
 

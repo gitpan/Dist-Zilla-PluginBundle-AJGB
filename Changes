@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-AJGB
 
+2.01   2012-05-09 20:28:40
+       Add missing PkgVersion
+       Use plugins for AutoPrereqs
+
 2.00   2012-05-09 20:05:54
        use git plugins
        drop PodWeaver..SeeAlso
