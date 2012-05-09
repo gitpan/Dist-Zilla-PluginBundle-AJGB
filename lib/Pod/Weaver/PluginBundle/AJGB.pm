@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Pod::Weaver::PluginBundle::AJGB;
 BEGIN {
-  $Pod::Weaver::PluginBundle::AJGB::VERSION = '1.103270';
+  $Pod::Weaver::PluginBundle::AJGB::AUTHORITY = 'cpan:AJGB';
 }
 #ABSTRACT: Pod::Weaver configuration for AJGB
 
@@ -37,14 +37,13 @@ sub mvp_bundle_config {
 
         [ '@AJGB/Postlude',     _exp('Region'),     { region_name   => 'postlude'       } ],
 
-        [ '@AJGB/SeeAlso',      _exp('SeeAlso'),    {} ],
-
         [ '@AJGB/Authors',      _exp('Authors'),    {} ],
         [ '@AJGB/Legal',        _exp('Legal'),      {} ],
     );
 }
 
 1;
+
 
 __END__
 =pod
@@ -57,21 +56,13 @@ Pod::Weaver::PluginBundle::AJGB - Pod::Weaver configuration for AJGB
 
 =head1 VERSION
 
-version 1.103270
+version 2.00
 
 =head1 DESCRIPTION
 
 Pod::Weaver configuration used by L<Dist::Zilla::PluginBundle::AJGB>.
 
-=head1 SEE ALSO
-
-=over 4
-
-=item *
-
-L<Dist::Zilla::PluginBundle::AJGB>
-
-=back
+=for Pod::Coverage mvp_bundle_config
 
 =head1 AUTHOR
 
@@ -79,7 +70,7 @@ Alex J. G. Burzyński <ajgb@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Alex J. G. Burzyński <ajgb@cpan.org>.
+This software is copyright (c) 2012 by Alex J. G. Burzyński <ajgb@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
