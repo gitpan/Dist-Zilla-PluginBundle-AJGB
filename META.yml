@@ -66,7 +66,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-PluginBundle-AJGB
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-AJGB
   repository: git://github.com/ajgb/dist-zilla-pluginbundle-ajgb.git
-version: 2.01
+version: 2.02
 x_Dist_Zilla:
   plugins:
     -

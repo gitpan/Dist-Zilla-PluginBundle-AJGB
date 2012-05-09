@@ -21,7 +21,7 @@ my %module_build_args = (
     "Alex J. G. Burzy\305\204ski <ajgb\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-AJGB",
-  "dist_version" => "2.01",
+  "dist_version" => "2.02",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::AJGB",
   "recommends" => {},

@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::AJGB::AUTHORITY = 'cpan:AJGB';
 }
 {
-  $Dist::Zilla::PluginBundle::AJGB::VERSION = '2.01';
+  $Dist::Zilla::PluginBundle::AJGB::VERSION = '2.02';
 }
 
 # ABSTRACT: Dist::Zilla plugins for AJGB
@@ -187,10 +187,14 @@ sub configure {
         [
             'Git::Tag' => {
                 filename   => 'Changes',
-                tag_format => '%v',
+                tag_format => 'v%v',
             }
         ],
-        [ 'Git::Commit'      => { time_zone     => 'Europe/London', } ],
+        [ 'Git::Commit'      => {
+                time_zone     => 'Europe/London',
+                allow_dirty     => [ 'README', 'Changes' ],
+            }
+        ],
         qw(
           Git::Push
         ),
@@ -210,7 +214,7 @@ Dist::Zilla::PluginBundle::AJGB - Dist::Zilla plugins for AJGB
 
 =head1 VERSION
 
-version 2.01
+version 2.02
 
 =head1 SYNOPSIS
 
@@ -287,9 +291,11 @@ This is the plugin bundle for AJGB. It's an equivalent to:
     format = %-6v %{yyyy-MM-dd HH:mm:ss}d
     [Git::Commit]
     time_zone = Europe/London
+    allow_dirty = README
+    allow_dirty = Changes
     [Git::Tag]
     filename = Changes
-    tag_format = %v
+    tag_format = v%v
     [Git::Push]
 
 =for Pod::Coverage     configure

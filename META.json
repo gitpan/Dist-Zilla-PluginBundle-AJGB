@@ -94,7 +94,7 @@
          "web" : "https://github.com/ajgb/dist-zilla-pluginbundle-ajgb"
       }
    },
-   "version" : "2.01",
+   "version" : "2.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
