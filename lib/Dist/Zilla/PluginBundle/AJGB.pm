@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::AJGB::AUTHORITY = 'cpan:AJGB';
 }
 {
-  $Dist::Zilla::PluginBundle::AJGB::VERSION = '2.02';
+  $Dist::Zilla::PluginBundle::AJGB::VERSION = '2.03';
 }
 
 # ABSTRACT: Dist::Zilla plugins for AJGB
@@ -158,7 +158,10 @@ sub configure {
     $self->add_plugins(
         [
             'Git::Check' =>
-              { allow_dirty => [ 'README', 'dist.ini', 'weaver.ini', ], }
+              {
+                  allow_dirty => [ 'README', 'dist.ini', 'weaver.ini', ],
+                  untracked_files => 'warn',
+              }
         ],
         qw(
           CheckChangesHasContent
@@ -214,7 +217,7 @@ Dist::Zilla::PluginBundle::AJGB - Dist::Zilla plugins for AJGB
 
 =head1 VERSION
 
-version 2.02
+version 2.03
 
 =head1 SYNOPSIS
 
@@ -278,6 +281,7 @@ This is the plugin bundle for AJGB. It's an equivalent to:
     allow_dirty = Changes
     allow_dirty = dist.ini
     allow_dirty = README
+    untracked_files = warn
     [CheckChangesHasContent]
     [CheckExtraTests]
     [TestRelease]
